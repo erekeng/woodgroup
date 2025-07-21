@@ -1,0 +1,89 @@
+body {
+	padding-top: 90px;
+	/* Фиксед header орнын есептеу */
+}
+
+.form-label {
+	display: block;
+	text-align: center;
+}
+
+.nav-buttons {
+	margin-top: 100px;
+	/* Немесе header биіктігіне қарай 90-100px */
+}
+
+.fixed-top-menu {
+	position: fixed;
+	top: 90px;
+	left: 0;
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 1040;
+	padding: 10px 0;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-top-menu .menu-container {
+	max-width: 600px;
+	/* Ені шектеледі */
+	margin: 0 auto;
+	/* Ортасына тураланады */
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 0 10px;
+}
+
+@media (max-width: 576px) {
+	.fixed-top-menu {
+		top: 170px;
+		/* Мобилді экранда хедер биіктігі көбейетін болса */
+	}
+}
+
+
+/* Негізгі контентке орын босату */
+.content {
+	padding-top: 160px;
+	/* Хедер (90px) + батырма жолы (70px) */
+}
+
+
+.chat-float {
+	position: fixed;
+	bottom: 100px;
+	right: 20px;
+	background-color: #0d6efd;
+	color: white;
+	border-radius: 50%;
+	padding: 15px;
+	font-size: 24px;
+	z-index: 1010;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+}
+
+.whatsapp-float {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #25d366;
+	color: white;
+	border-radius: 50%;
+	padding: 15px;
+	font-size: 24px;
+	z-index: 1000;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+}

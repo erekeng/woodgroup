@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wood Group – 4 выгодных предложения</title>
+		
+		<!-- Bootstrap CSS & Icons -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="shortcut icon" href="img/favicon.svg">
+	</head>
+	<body>
+		
+		<!-- 🔝 Fixed Header -->
+		<nav class="navbar navbar-light bg-light fixed-top py-3 shadow-sm">
+			<div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center text-dark gap-2">
+				
+				<!-- 🖼️ Логотип -->
+				<a class="navbar-brand mb-0 d-flex align-items-center" href="#">
+					<img src="img/logo.png" alt="Wood Group" width="40" height="40" class="rounded">
+					<span class="ms-2">Wood Group</span>
+				</a>
+				
+				<!-- 📍 Мекенжай -->
+				<div class="text-center text-md-start">
+					<i class="bi bi-geo-alt-fill"></i> г. Астана, пр-т. Кабанбай батыра, 2/2</br> БЦ "Держава", офис 416
+				</div>
+				
+				<!-- 📞 Телефон + WhatsApp -->
+				<div class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
+					<!-- Телефон -->
+					<div>
+						<i class="bi bi-telephone-fill"></i>
+						<a href="tel:+77080808833" class="text-dark text-decoration-none">+7 (708) 080-88-33</a>
+					</div>
+					<!-- WhatsApp -->
+					<a href="https://wa.me/77080808833" target="_blank" class="btn btn-success btn-sm">
+						<i class="bi bi-whatsapp"></i> WhatsApp
+					</a>
+				</div>
+				
+			</div>
+		</nav>
+		
+		<!-- 🔘 4 Батырма -->
+		<div class="fixed-top-menu">
+			<div class="menu-container">
+				<a href="index.html" class="btn btn-outline-primary btn-sm w-100">Главная</a>
+				<a href="calc.html" class="btn btn-outline-success btn-sm w-100">Калькулятор</a>
+				<a href="process.html" class="btn btn-outline-warning btn-sm w-100">Процесс</a>
+				<a href="galery.html" class="btn btn-outline-dark btn-sm w-100">Каталог</a>
+			</div>
+		</div>
+		
+		
+		<div class="content container">
+			
+			<h4 class="text-center mb-4 fw-bold">Калькулятор мебели</h4>
+			
+			<!-- Суретті таңдау -->
+			<div class="container mt-4">
+				<label class="form-label">Выберите картину</label>
+				<div class="row g-3">
+					
+					<div class="col-6 col-md-3 text-center">
+						<img src="img/straight.jpg" alt="straight" width="100%" class="selectable img-thumbnail" data-type="straight" style="cursor:pointer;">
+					</div>
+					
+					<div class="col-6 col-md-3 text-center">
+						<img src="img/j-shaped.jpg" alt="j-shaped" width="100%" class="selectable img-thumbnail" data-type="j-shaped" style="cursor:pointer;">
+					</div>
+					
+					<div class="col-6 col-md-3 text-center">
+						<img src="img/u-shaped.jpg" alt="u-shaped" width="100%" class="selectable img-thumbnail" data-type="u-shaped" style="cursor:pointer;">
+					</div>
+					
+					<div class="col-6 col-md-3 text-center">
+						<img src="img/cabinet.jpg" alt="cabinet" width="100%" class="selectable img-thumbnail" data-type="cabinet" style="cursor:pointer;">
+					</div>
+					
+				</div>
+				
+				
+				<!-- Жалпы өрістер -->
+				
+				<div class="row mb-3" id="commonFields" style="display:none;">
+					<div class="col-4 text-center d-none" id="lengthAWrapper">
+						<label for="lengthA" class="form-label">Длина A</label>
+						<input type="number" id="lengthA" class="form-control" value="1000" />
+					</div>
+					<div class="col-4 text-center d-none" id="lengthBWrapper">
+						<label for="lengthB" class="form-label">Длина B</label>
+						<input type="number" id="lengthB" class="form-control" value="1000" />
+					</div>
+					<div class="col-4 text-center d-none" id="lengthCWrapper">
+						<label for="lengthC" class="form-label">Длина C</label>
+						<input type="number" id="lengthC" class="form-control" value="1000" />
+					</div>
+					<div class="col-4 text-center d-none" id="heightWrapper">
+						<label for="height" class="form-label">Высота (мм)</label>
+						<input type="number" id="height" class="form-control" value="2000" />
+					</div>
+					<div class="col-4 text-center d-none" id="widthWrapper">
+						<label for="width" class="form-label">Ширина (мм)</label>
+						<input type="number" id="width" class="form-control" value="800" />
+					</div>
+					<div class="col-4 text-center d-none" id="depthWrapper">
+						<label for="depth" class="form-label">Глубина (мм)</label>
+						<input type="number" id="depth" class="form-control" value="500" />
+					</div>
+					
+					<div class="w-100"></div>
+					
+					<div class="col-6">
+						<label for="calcType" class="form-label">Тип расчета:</label>
+						<select id="calcType" class="form-select">
+							<option value="cut">Распил</option>
+							<option value="dowel">Распил, присадка</option>
+							<option value="assembler">Распил, присадка, сборка</option>
+							<option value="turnkey" selected>Под ключ</option>
+						</select>
+					</div>
+					<div class="col-6">
+						<label for="fasadeType" class="form-label">Материал фасада:</label>
+						<select id="fasadeType" class="form-select">
+							<option>МДФ пленка</option>
+							<option>ЛДСП</option>
+						</select>
+					</div>
+					
+					<div class="col-6 d-none" id="cabHeightWrapper">
+						<input class="form-check-input" type="checkbox" value="" id="cabHeight">
+						<label class="form-check-label" for="cabHeight">
+							До потолка
+						</label>
+					</div>
+					<div class="col-6 d-none" id="tabletopWrapper">
+						<input class="form-check-input" type="checkbox" value="" id="tabletop">
+						<label class="form-check-label" for="tabletop">
+							Толстая столешница
+						</label>
+					</div>
+					<div class="col-6 d-none" id="falsePanelWrapper">
+						<input class="form-check-input" type="checkbox" value="" id="falsePanel">
+						<label class="form-check-label" for="falsePanel">
+							Фальш панель
+						</label>
+					</div>
+					<div class="col-6 d-none" id="penalWrapper">
+						<input class="form-check-input" type="checkbox" value="" id="penal">
+						<label class="form-check-label" for="penal">
+							Пенал
+						</label>
+					</div>
+				</div>
+				
+				<!-- Есептеу батырмасы -->
+				<div class="row mb-3" id="calculateRow" style="display:none;">
+					<div class="col-4">
+						<button onclick="calculateMaterial()" class="btn btn-primary w-100">Рассчитать</button>
+					</div>
+				</div>
+				
+				<div id="result" class="mt-3"></div>
+			</div>
+		</div>
+		<a href="chat.html" 
+		class="chat-float" 
+		title="Жиһаз көмекшісі">
+			<i class="bi bi-robot"></i>
+		</a>
+		
+		<a href="https://wa.me/77080808833" 
+		class="whatsapp-float" 
+		target="_blank" 
+		title="Бізге WhatsApp арқылы жазыңыз">
+			<i class="bi bi-whatsapp"></i>
+		</a>
+		
+		<footer class="bg-dark text-white mt-5 p-4">
+			<div class="container">
+				<h5>Наш адрес</h5>
+				
+				<!-- 2ГИС карта виджеті -->
+				<div id="dg-map" class="mb-3">
+					<script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+					<script charset="utf-8">
+						new DGWidgetLoader({
+							width: '100%',
+							height: 300,
+							borderColor: "#a3a3a3",
+							pos: {
+								lat: 51.17647772344348,
+								lon: 71.46162271499635,
+								zoom: 16
+							},
+							opt: { city: "nur_sultan" },
+							org: [{ id: "70000001080463305" }]
+						});
+					</script>
+					<noscript style="color:#c00;font-size:16px;font-weight:bold;">
+						Для отображения карты необходимо включить JavaScript в настройках браузера.
+					</noscript>
+				</div>
+				
+				<!-- Қосымша сілтемелер -->
+				<p><a class="text-white" href="http://2gis.kz/nur_sultan/firm/70000001080463305/" target="_blank">Открыть карту на 2ГИС</a></p>
+				<p><a class="text-white" href="http://2gis.kz/nur_sultan/firm/70000001080463305/photos/" target="_blank">Фотографии компании</a></p>
+				<p><a class="text-white" href="http://2gis.kz/nur_sultan/routeTab/rsType/bus/to/71.461614,51.175732╎Wood Group" target="_blank">Как добраться</a></p>
+				
+				<!-- Авторлық құқық -->
+				<p class="mt-3">Все права защищены © 2025</p>
+			</div>
+		</footer>
+		
+		
+		<script>
+			let selectedMaterial = ""; // Таңдалған материалды сақтау
+			
+			document.addEventListener("DOMContentLoaded", function () {
+				const lengthAWrapper = document.getElementById("lengthAWrapper");
+				const lengthBWrapper = document.getElementById("lengthBWrapper");
+				const lengthCWrapper = document.getElementById("lengthCWrapper");
+				const heightWrapper = document.getElementById("heightWrapper");
+				const widthWrapper = document.getElementById("widthWrapper");
+				const depthWrapper = document.getElementById("depthWrapper");
+				const commonFields = document.getElementById("commonFields");
+				const calculateRow = document.getElementById("calculateRow");
+				const cabHeightWrapper = document.getElementById("cabHeightWrapper");
+				const tabletopWrapper = document.getElementById("tabletopWrapper");
+				const falsePanelWrapper = document.getElementById("falsePanelWrapper");
+				const penalWrapper = document.getElementById("penalWrapper");
+				
+				const images = document.querySelectorAll(".selectable");
+				
+				images.forEach(img => {
+					img.addEventListener("click", function () {
+						selectedMaterial = this.getAttribute("data-type"); // Таңдалғанын сақтау
+						
+						[lengthAWrapper, lengthBWrapper, lengthCWrapper,
+						heightWrapper, widthWrapper, depthWrapper,
+						cabHeightWrapper, tabletopWrapper, falsePanelWrapper, penalWrapper
+						].forEach(el => el.classList.add("d-none"));
+						
+						commonFields.style.display = "flex";
+						calculateRow.style.display = "flex";
+						
+						const showExtraBlocks = () => {
+							cabHeightWrapper.classList.remove("d-none");
+							tabletopWrapper.classList.remove("d-none");
+							falsePanelWrapper.classList.remove("d-none");
+							penalWrapper.classList.remove("d-none");
+						};
+						
+						if (selectedMaterial === "straight") {
+							lengthAWrapper.classList.remove("d-none");
+							showExtraBlocks();
+							} else if (selectedMaterial === "j-shaped") {
+							lengthAWrapper.classList.remove("d-none");
+							lengthBWrapper.classList.remove("d-none");
+							showExtraBlocks();
+							} else if (selectedMaterial === "u-shaped") {
+							lengthAWrapper.classList.remove("d-none");
+							lengthBWrapper.classList.remove("d-none");
+							lengthCWrapper.classList.remove("d-none");
+							showExtraBlocks();
+							} else if (selectedMaterial === "cabinet") {
+							heightWrapper.classList.remove("d-none");
+							widthWrapper.classList.remove("d-none");
+							depthWrapper.classList.remove("d-none");
+						}
+						
+						document.getElementById("result").innerHTML = "";
+					});
+				});
+			});
+			
+			function calculateMaterial() {
+				if (!selectedMaterial) {
+					alert("Алдымен материал түрін таңдаңыз!");
+					return;
+				}
+				
+				const type = document.getElementById("calcType").value;
+				const fasadeType = document.getElementById("fasadeType").value;
+				const height = parseFloat(document.getElementById("height").value) || 0;
+				const width = parseFloat(document.getElementById("width").value) || 0;
+				const depth = parseFloat(document.getElementById("depth").value) || 0;
+				const lengthA = parseFloat(document.getElementById("lengthA").value) || 0;
+				const lengthB = parseFloat(document.getElementById("lengthB").value) || 0;
+				const lengthC = parseFloat(document.getElementById("lengthC").value) || 0;
+				const resultField = document.getElementById("result");
+				const cabHeight = document.getElementById("cabHeight").checked;
+				const tabletop = document.getElementById("tabletop").checked;
+				const falsePanel = document.getElementById("falsePanel").checked;
+				const penal = document.getElementById("penal").checked;
+				
+				let kСabHeight = cabHeight === true ? 1.15 : 1.0;
+				let sTabletop = tabletop === true ? 5 : 0;
+				let sFalsePanel = falsePanel === true ? 10 : 0;
+				let sPenal = penal === true ? 10 : 0;
+				let kFasade = fasadeType === "ЛДСП" ? 0.8 : 1.05;
+				let kType = 1;
+				
+				if (type === "") {
+					alert("Есептеу түрін таңдаңыз!");
+					return;
+					} else if (type === "cut") {
+					kType = 0.3;
+					} else if (type === "dowel") {
+					kType = 0.5;
+					} else if (type === "assembler") {
+					kType = 0.7;
+				}
+				
+				let result = 0;
+				
+				if (selectedMaterial === "straight") {
+					result = lengthA * kFasade * kType * (170 + sTabletop + sFalsePanel + sPenal) * kСabHeight;
+					} else if (selectedMaterial === "j-shaped") {
+					result = (lengthA + lengthB - 600) * kFasade * kType * (170 + sTabletop + sFalsePanel + sPenal) * kСabHeight;
+					} else if (selectedMaterial === "u-shaped") {
+					result = (lengthA + lengthB + lengthC - 1200) * kFasade * kType * (170 + sTabletop + sFalsePanel + sPenal) * kСabHeight;
+					} else if (selectedMaterial === "cabinet") {
+					result = ((height * width * depth * 0.000000001 * 32912.5) + 53229) * kFasade * kType * 2;
+				}
+				
+			resultField.innerHTML = `<div class='alert alert-success'>${result.toFixed(0)} тг</div>`;
+			}
+		</script>
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
