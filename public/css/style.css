@@ -50,25 +50,6 @@ body {
 }
 
 
-.chat-float {
-	position: fixed;
-	bottom: 100px;
-	right: 20px;
-	background-color: #0d6efd;
-	color: white;
-	border-radius: 50%;
-	padding: 15px;
-	font-size: 24px;
-	z-index: 1010;
-	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 60px;
-	height: 60px;
-}
-
 .whatsapp-float {
 	position: fixed;
 	bottom: 20px;
